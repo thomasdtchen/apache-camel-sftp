@@ -1,7 +1,2 @@
-# example 
-# https://turreta.com/2020/02/29/using-an-sftp-server-apache-camel-and-spring-boot/
-
-# official document 
-# https://camel.apache.org/components/latest/sftp-component.html
-
-# ssh-keygen -t rsa -f id_rsa
+logging:
+  file: /apps/local/logs/camel-sftp.log

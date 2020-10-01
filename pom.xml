@@ -8,11 +8,9 @@
         <version>2.2.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.turreta.camelspringbootdemo</groupId>
-    <artifactId>com-turreta-camelspringbootdemo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>com-turreta-camelspringbootdemo</name>
-    <description>Demo for SFTP, Apache Camel, and Spring Boot</description>
+    <groupId>com.thomasweb</groupId>
+    <artifactId>apache-camel-sftp</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -30,7 +28,12 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
-            </dependency>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>compile</scope>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -44,10 +47,14 @@
         </dependency>
     </dependencies>
     <build>
+        <finalName>camel-sftp</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
             </plugin>
         </plugins>
     </build>
